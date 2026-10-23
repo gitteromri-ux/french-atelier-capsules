@@ -1,5 +1,5 @@
 /* PREVIEW 2026-10-23: mobile sliders + pricing card order. Presentation only.
-   Does not touch window.FA_META, FA_CHECKOUT, fbq, data-fa-buy handlers, forms or any network call.
+   No tracking, checkout, storage, cookie, form or network code in this file (it only moves/styles existing nodes and adds dots).
    Runs after js/fa-promo.js (which sets the live order One / All three / Two) so the final order is One 01, Two 02, All three 03. */
 (function () {
   'use strict';
