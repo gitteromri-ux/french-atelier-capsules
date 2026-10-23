@@ -1,0 +1,121 @@
+/* Presentation only. Checkout, pricing and tracking are deliberately untouched. */
+.fa-capsule-sales .kpz-price { flex-wrap: wrap; align-items: baseline; }
+html:root:root:root:root:root body#fa.fa-capsule-sales .kpz-amt { font-size: clamp(54px,5vw,72px) !important; }
+.fa-capsule-sales .kpz-unit { width: 100%; font-size: 18px !important; line-height: 1.4 !important; }
+.fa-capsule-sales .kpz-pay { font-size: 18px !important; line-height: 1.55 !important; }
+html:root:root:root:root:root body#fa.fa-capsule-sales .kpz-was { font-size:18px!important;letter-spacing:0!important;line-height:1.5!important;min-height:27px; }
+html:root:root:root:root:root body#fa.fa-capsule-sales .kpz-all .kpz-cur { color:#000034!important; }
+html:root:root:root:root:root body#fa.fa-capsule-sales .kpz-cta {
+  display:flex;flex-direction:column;gap:6px;min-height:76px!important;
+  padding:16px 12px;background:#84d2ff!important;color:#07152f!important;
+  border:0!important;box-shadow:0 10px 24px -12px rgba(74,174,255,.8);
+}
+html:root:root:root:root:root body#fa.fa-capsule-sales .kpz-all .kpz-cta { background:#ddc187!important;color:#1b1403!important; }
+.kpz-enroll-title { font:800 24px/1.2 var(--sans); }
+.kpz-enroll-amount { font:600 18px/1.3 var(--sans); }
+html:root:root:root:root:root body#fa.cap-page .kps-card .title {
+  min-height: 2.1em;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.05 !important;
+}
+html:root:root:root:root:root body#fa.cap-page .kps-card .what {
+  min-height: 3.75em;
+}
+.cap-faculty {
+  background: #f3efe9;
+  color: #0b0b2a;
+  padding: clamp(72px, 7vw, 112px) 0;
+}
+.cap-faculty > .kps-wrap { width: calc(100% - 144px); max-width: 1440px; }
+.cap-faculty-head { max-width: 1200px; margin-bottom: 80px; }
+html:root:root:root:root:root body#fa .cap-faculty-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(52px, 6vw, 96px) !important;
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  margin: 0;
+  color: #0b0b2a;
+}
+.cap-faculty-head h2 span { color: #74603b; }
+.cap-faculty-head > p { font: 400 20px/1.55 var(--sans); max-width: 750px; }
+.cap-faculty-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 64px; align-items: start; }
+.cap-teacher { min-width: 0; }
+.cap-portrait {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #d9d6cf;
+  box-shadow: 0 20px 50px -30px rgba(11,11,42,.45);
+}
+html:root:root:root:root:root body#fa .cap-portrait img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center;
+}
+html:root:root:root:root:root body#fa .cap-teacher-featured .cap-portrait img {
+  object-position: center center;
+}
+.cap-teacher-copy { padding: 36px 0 0; }
+.cap-theme { font: 700 17px/1.4 var(--sans); color: #70572c; margin: 0 0 10px; }
+html:root:root:root:root:root body#fa .cap-teacher h3 {
+  font: 500 clamp(38px,3.5vw,56px)/1.08 var(--serif) !important;
+  color: #0b0b2a !important;
+  letter-spacing: -.02em;
+  margin: 0 0 16px;
+}
+html:root:root:root:root:root body#fa .cap-role { font: 500 25px/1.4 var(--sans) !important; min-height: 2.8em; color: #70572c; margin: 0 0 24px; }
+html:root:root:root:root:root body#fa .cap-bio { font: 400 30px/1.4 var(--sans) !important; color: #26354b; margin: 0; }
+.cap-bio br { display: none; }
+.cap-bio-break { display: none; }
+.cap-teacher-featured .cap-portrait { outline: none; }
+#watch .kpx-frame video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cap-film-caption { font: 400 18px/1.4 var(--sans); color: #e8eeff; }
+@media (min-width: 701px) and (max-width: 1399px) {
+  .cap-bio br { display: none; }
+}
+@media(max-width: 900px) {
+  .cap-faculty > .kps-wrap { width: calc(100% - 64px); }
+  .cap-faculty-grid { gap: 40px; grid-template-columns: 1fr; }
+  .cap-teacher { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+}
+@media(max-width: 700px) {
+  .cap-faculty > .kps-wrap { width: calc(100% - 48px); }
+  .cap-faculty-head { margin-bottom: 48px; }
+  .cap-faculty-grid { grid-template-columns: 1fr; gap: 72px; }
+  .cap-teacher { display: block; }
+  .cap-portrait { max-width: none; }
+  .cap-role { min-height: 0; }
+  .cap-faculty-head > p { font-size: 18px; }
+  .cap-teacher-copy { padding-top: 28px; }
+  html:root:root:root:root:root body#fa .cap-teacher h3 { font-size: 44px !important; }
+  html:root:root:root:root:root body#fa .cap-role { font-size: 22px !important; min-height: 0; margin-bottom: 20px; }
+  html:root:root:root:root:root body#fa .cap-bio { font-size: 25px !important; }
+  .cap-bio br { display: none; }
+  html:root:root:root:root:root body#fa.cap-page .kps-card .title { min-height: 0; }
+  html:root:root:root:root:root body#fa.cap-page .kps-card .what { min-height: 0; }
+  html:root:root:root:root:root body#fa.cap-page .kps-read .head { flex-direction: column; align-items: flex-start; }
+  html:root:root:root:root:root body#fa.cap-page .kps-read .head a { white-space: normal; max-width: 100%; }
+  html:root:root:root:root:root body#fa.cap-page .kps-card .eyebrow { right: 20px; white-space: normal; line-height: 1.4; }
+  html:root:root:root:root:root body#fa.cap-page .kps-rail { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html:root:root:root:root:root body#fa.cap-page .kps-rail .cell { min-width: 0; overflow-wrap: anywhere; padding-inline: 16px; }
+  html:root:root:root:root:root body#fa.cap-page .nav-drawer-close { top: calc(var(--fa-top,0px) + 12px); }
+}
+@media(max-width: 480px) {
+  html:root:root:root:root:root body#fa.cap-page .fa-strip {
+    display: grid; grid-template-columns: auto 1fr; gap: 4px 12px;
+    height: 68px; padding: 6px 40px 6px 12px; box-sizing: border-box;
+  }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-code { font-size: 15px; height: 26px; letter-spacing: 0; }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-msg { white-space: nowrap; font-size: 15px; }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-msg .short { display: none; }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-ends { grid-column: 1/-1; margin: 0; justify-content: center; font-size: 15px; }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-ends .lbl { display: inline; }
+  html:root:root:root:root:root body#fa.cap-page .fa-strip-x { width: 40px; height: 44px; right: 0; }
+}
+@media(max-width: 360px) {
+  html:root:root:root:root:root body#fa.cap-page .kps-rail { grid-template-columns: minmax(0,1fr); }
+}

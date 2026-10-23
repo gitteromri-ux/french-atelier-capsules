@@ -1,0 +1,96 @@
+/* PREVIEW 2026-10-23: mobile-first layout for /culture-capsules.
+   Layout, ordering and scroll-snap sliders ONLY. No tracking / checkout selector, id, class or attribute is touched.
+   Everything is scoped to phones (max-width:760px); desktop keeps the live look (pricing is simply moved up in the HTML). */
+
+/* slider dots (injected by js/fa-capsules-mobile-preview.js; presentation only) */
+.fa-sl-dots{display:none}
+
+@media (max-width:760px){
+  /* ---------- compact hero so pricing starts in the first fold ---------- */
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero{min-height:0!important;align-items:flex-start!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .kps-wrap{padding:1.5rem 0 1.3rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .kps-reel{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .kpx-eyebrow{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .kps-h1{font-size:2.05rem!important;line-height:1.08!important;margin:0 0 .6rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .sub{font-size:.95rem!important;line-height:1.34!important;margin:0 0 .8rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .cta .kps-btn{min-height:0!important;padding-top:.8rem!important;padding-bottom:.8rem!important;font-size:1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .tp{margin:.2rem 0 0!important;font-size:.85rem!important;gap:.4rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .tp img{height:17px!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .tp .stars i{width:15px!important;height:15px!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .cta{gap:.7rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .cta .kps-btn-light{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .fa-refund-banner{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-hero .kps-stats{display:none!important}
+
+  /* ---------- pricing, first thing under the hero ---------- */
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing{padding:1.6rem 0 2.2rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .head{margin:0 auto .9rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .kps-kicker{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .kps-h2{font-size:2rem!important;margin-bottom:.4rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .kps-sub{font-size:.92rem!important;line-height:1.35!important}
+
+  /* ---------- generic slider ---------- */
+  html:root:root:root:root:root:root:root:root:root body#fa .fa-slider{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;grid-template-columns:none!important;
+    overflow-x:auto!important;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+    gap:.9rem!important;scrollbar-width:none;padding-bottom:.4rem;align-items:stretch!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .fa-slider::-webkit-scrollbar{display:none}
+  html:root:root:root:root:root:root:root:root:root body#fa .fa-slider>*{flex:0 0 84%!important;width:auto!important;max-width:84%!important;min-width:0;scroll-snap-align:center;margin:0!important;box-sizing:border-box}
+  html:root:root:root:root:root:root:root:root:root body#fa .fa-slider.fa-sl-narrow>*{flex-basis:70%!important;max-width:70%!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .fa-slider.fa-sl-full>*{flex-basis:100%!important;max-width:100%!important}
+  .fa-sl-dots{display:flex;justify-content:center;align-items:center;gap:.5rem;margin:.7rem 0 .2rem;min-height:12px}
+  .fa-sl-dots button,html:root:root:root:root:root:root:root:root:root body#fa .fa-sl-dots button{all:unset;display:block!important;flex:none!important;box-sizing:border-box!important;width:9px!important;height:9px!important;min-width:0!important;min-height:0!important;padding:0!important;border-radius:50%!important;background:rgba(127,127,127,.45);cursor:pointer;position:relative;transition:width .2s,background .2s}
+  .fa-sl-dots button::after{content:"";position:absolute;inset:-9px}
+  .fa-sl-dots button.is-on,html:root:root:root:root:root:root:root:root:root body#fa .fa-sl-dots button.is-on{width:22px!important;border-radius:6px!important;background:#C8A96B}
+  .fa-sl-hint{display:block;text-align:center;font:600 .78rem/1 var(--sans,Inter,sans-serif);letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:.2rem 0 0}
+
+  /* pricing cards: slider, card height = tallest, full card content kept */
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider{padding-top:.2rem!important;gap:.8rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider>.kpz-card{flex-basis:88%!important;max-width:88%!important;grid-template-rows:none!important;grid-row:auto!important;display:flex!important;flex-direction:column!important;transform:none!important;margin:0!important;padding-top:1.8rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider>.kpz-all{padding-top:3.4rem!important}
+  /* tighter card top so the CTA lands in the first two screens */
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider>.kpz-card{padding:1.3rem 1.2rem 1.3rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider>.kpz-all{padding-top:3rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-top{padding-bottom:.5rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-num{margin-bottom:.35rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-name{font-size:1.9rem!important;margin-bottom:.25rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-sub{font-size:.95rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-pricebox{padding:.7rem 0 .5rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-amt{font-size:3.6rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-cur{font-size:1.6rem!important;margin-top:.5rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-pay{padding:.3rem 0 .8rem!important;font-size:.95rem!important;white-space:normal!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-grid.fa-slider .kpz-cta{min-height:54px!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .fa-sl-dots button{background:rgba(255,255,255,.35)}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .fa-sl-dots button.is-on{background:#D8BC85}
+  html:root:root:root:root:root:root:root:root:root body#fa .kpz-pricing .fa-sl-hint{color:#fff}
+
+  /* ---------- capsule cards + ten classes + others ---------- */
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-cards.fa-slider>.kps-card{min-height:0!important;height:auto!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-grid.fa-slider>.kps-tile{flex-direction:column!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-grid.fa-slider>.kps-tile .img{flex:0 0 auto!important;min-height:0!important;aspect-ratio:16/10!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-grid.fa-slider>.kps-tile .body{padding:1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-rail.fa-slider>.cell{flex-basis:46%!important;max-width:46%!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details{flex-basis:88%!important;max-width:88%!important;align-self:stretch}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details summary{list-style:none;cursor:default;pointer-events:none}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details summary::-webkit-details-marker{display:none}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details summary::after,html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details summary::before{display:none!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-trust .row.fa-slider>.t{flex-basis:78%!important;max-width:78%!important}
+
+  /* tighter vertical rhythm on the sections that follow */
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-trust{padding:1.8rem 0!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-three,html:root:root:root:root:root:root:root:root:root body#fa .kps-how,html:root:root:root:root:root:root:root:root:root body#fa .cap-faculty,html:root:root:root:root:root:root:root:root:root body#fa .kpx-watch,html:root:root:root:root:root:root:root:root:root body#fa .kps-method,html:root:root:root:root:root:root:root:root:root body#fa .kps-learn,html:root:root:root:root:root:root:root:root:root body#fa .kps-faq,html:root:root:root:root:root:root:root:root:root body#fa .kps-read{padding-top:2.6rem!important;padding-bottom:2.6rem!important}
+
+  /* polish */
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-learn .cols.fa-slider{align-items:flex-start!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details{flex-basis:92%!important;max-width:92%!important;align-self:flex-start!important;padding:1rem 1.1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-faq .list.fa-slider>details p{font-size:.92rem!important;line-height:1.4!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .cap-faculty-grid.fa-slider .cap-portrait{aspect-ratio:1/1!important;max-height:300px;overflow:hidden}
+  html:root:root:root:root:root:root:root:root:root body#fa .cap-faculty-grid.fa-slider .cap-portrait img{width:100%!important;height:100%!important;object-fit:cover;object-position:50% 18%}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage{min-height:0!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage .inner{padding:3.2rem 1.2rem 1.4rem!important;gap:1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage h3{font-size:1.9rem!important;margin-bottom:.6rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage p{font-size:.98rem!important;margin-bottom:1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage .eyebrow{margin-bottom:.8rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stage .acts{gap:.6rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stat{padding:1rem!important}
+  html:root:root:root:root:root:root:root:root:root body#fa .kps-reveal .kps-stat b{font-size:2.6rem!important}
+}
